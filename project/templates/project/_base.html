@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    
+</head>
+
+<body>
+    <div id="app">
+        working?:
+        [{ message }]
+        <button @click="click">Click here</button>
+    </div>
+    {% block content %}
+    {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        var app = new Vue({
+            delimiters: ["[{", "}]"],
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            },
+            methods: {
+                click: function(){
+                    console.log('clicked');
+                }
+            },
+        })
+    </script>
+
+</body>
+
+</html>

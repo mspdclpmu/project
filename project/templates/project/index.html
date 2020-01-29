@@ -8,7 +8,7 @@
 </div>
 {% endblock %}
 
-
+{% block script %}
 <script>
     var app = new Vue({
         delimiters: ["[{", "}]"],
@@ -17,9 +17,10 @@
             message: 'Hello Vue!'
         },
         methods: {
-            click: function(){
+            click: function () {
                 console.log('clicked');
             }
         },
     })
 </script>
+{% endblock %}

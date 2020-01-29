@@ -1,4 +1,25 @@
 {% extends './_base.html'%}
 {% block content %}
 <h2>Project index</h2>
+<div id="project">
+    working?:
+    [{ message }]
+    <button @click="click">Click here</button>
+</div>
 {% endblock %}
+
+
+<script>
+    var app = new Vue({
+        delimiters: ["[{", "}]"],
+        el: '#project',
+        data: {
+            message: 'Hello Vue!'
+        },
+        methods: {
+            click: function(){
+                console.log('clicked');
+            }
+        },
+    })
+</script>
